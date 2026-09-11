@@ -1,0 +1,182 @@
+.footer {
+  background-color: var(--bordeaux-velvet);
+
+  color: var(--forgotten-manuscript);
+
+  padding: 70px 8% 25px;
+
+  border-top: 2px solid var(--baroque-brass);
+}
+
+
+/* =========================
+   TOP SECTION
+========================= */
+
+.footer-top {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+
+  gap: 60px;
+
+  padding-bottom: 50px;
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.footer-brand {
+  max-width: 330px;
+}
+
+.footer-crown {
+  display: block;
+
+  color: var(--heirloom-pearl);
+
+  font-size: 25px;
+
+  margin-bottom: 5px;
+}
+
+.footer-brand h2 {
+  color: var(--heirloom-pearl);
+
+  font-size: 28px;
+
+  font-weight: 500;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 18px;
+}
+
+.footer-brand p {
+  color: var(--forgotten-manuscript);
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   FOOTER COLUMNS
+========================= */
+
+.footer-column {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+.footer-column h3 {
+  color: var(--heirloom-pearl);
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  margin-bottom: 8px;
+}
+
+.footer-column a {
+  color: var(--forgotten-manuscript);
+
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: var(--heirloom-pearl);
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.footer-divider {
+  width: 100%;
+  height: 1px;
+
+  background-color: var(--baroque-brass);
+
+  margin-bottom: 25px;
+
+  opacity: 0.8;
+}
+
+
+/* =========================
+   BOTTOM SECTION
+========================= */
+
+.footer-bottom {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  color: var(--forgotten-manuscript);
+
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+}
+
+.footer-tagline {
+  color: var(--heirloom-pearl);
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 45px;
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 550px) {
+  .footer {
+    padding: 50px 7% 20px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .footer-brand {
+    grid-column: span 1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+}

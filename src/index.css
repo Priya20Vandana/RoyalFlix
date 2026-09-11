@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  --bordeaux-velvet: #642025;
+  --heirloom-pearl: #e8dec7;
+  --baroque-brass: #705832;
+  --forgotten-manuscript: #b59d79;
+  --midnight-study: #1a1617;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--midnight-study);
+  color: var(--heirloom-pearl);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+button,
+a {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

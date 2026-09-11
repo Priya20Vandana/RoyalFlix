@@ -1,0 +1,62 @@
+.movie-card {
+  position: relative;
+
+  min-width: 220px;
+  width: 220px;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  background-color: var(--midnight-study);
+
+  cursor: pointer;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.movie-card:hover {
+  transform: scale(1.06);
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.55);
+
+  z-index: 10;
+}
+
+.movie-poster {
+  width: 100%;
+  height: 310px;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+.movie-info {
+  padding: 15px;
+
+  background-color: var(--midnight-study);
+}
+
+.movie-info h3 {
+  color: var(--heirloom-pearl);
+
+  font-size: 18px;
+  font-weight: 500;
+
+  margin-bottom: 10px;
+}
+
+.movie-details {
+  display: flex;
+
+  gap: 10px;
+
+  color: var(--forgotten-manuscript);
+
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+}
