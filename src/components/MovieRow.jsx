@@ -10,6 +10,7 @@ function MovieRow({ title, movies }) {
         {movies.map((movie) => (
           <MovieCard
             key={movie.id}
+            id={movie.id}
             title={movie.title}
             image={movie.image}
             year={movie.year}
