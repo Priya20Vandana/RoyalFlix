@@ -1,56 +1,67 @@
+/* =========================
+   NAVBAR
+========================= */
+
 .navbar {
   width: 100%;
-  height: 90px;
+  height: 86px;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
 
-  padding: 0 6%;
+  padding: 0 5%;
+  box-sizing: border-box;
 
   background: linear-gradient(
     90deg,
-    var(--midnight-study) 0%,
-    var(--bordeaux-velvet) 55%,
-    #3b1115 100%
+    #24100f,
+    #421719,
+    #5a171b
   );
 
-  border-bottom: 1px solid rgba(181, 157, 121, 0.45);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.35);
 
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+
   z-index: 1000;
 }
 
 
 /* =========================
-   ROYALFLIX BRAND
+   LOGO
 ========================= */
 
 .navbar-brand {
-  width: 220px;
+  justify-self: start;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  color: var(--forgotten-manuscript);
-}
+  text-decoration: none;
 
-.crown {
-  font-size: 22px;
-
-  line-height: 15px;
-
-  color: var(--forgotten-manuscript);
+  position: relative;
 }
 
 .navbar-brand h1 {
-  font-size: 28px;
-  font-weight: 500;
+  margin: 0;
 
-  letter-spacing: 3px;
+  font-family: Georgia, serif;
+  font-size: 1.9rem;
+  letter-spacing: 2px;
 
-  color: var(--forgotten-manuscript);
+  color: #d8c18c;
+}
+
+.crown {
+  position: absolute;
+  top: -20px;
+
+  font-size: 17px;
+  color: #d4af37;
 }
 
 
@@ -59,49 +70,52 @@
 ========================= */
 
 .navbar-links {
-  height: 100%;
+  justify-self: center;
 
   display: flex;
   align-items: center;
+  justify-content: center;
 
-  gap: 48px;
+  gap: 42px;
 
-  margin-left: 70px;
+  height: 100%;
 }
 
-.navbar-links a {
-  position: relative;
-
+.nav-link {
   height: 100%;
 
   display: flex;
   align-items: center;
 
-  color: var(--heirloom-pearl);
+  position: relative;
 
-  font-size: 17px;
+  color: #e4d5bd;
+
+  text-decoration: none;
+
+  font-family: Georgia, serif;
+  font-size: 1rem;
 
   transition: color 0.3s ease;
 }
 
-.navbar-links a:hover {
-  color: var(--forgotten-manuscript);
+.nav-link:hover {
+  color: #ffffff;
 }
 
 
-/* Active Link */
+/* Active underline */
 
-.navbar-links a.active {
-  color: var(--forgotten-manuscript);
+.nav-link.active {
+  color: #ffffff;
 }
 
-.navbar-links a.active::after {
+.nav-link.active::after {
   content: "";
 
   position: absolute;
 
   bottom: 0;
-
   left: 50%;
 
   transform: translateX(-50%);
@@ -109,59 +123,71 @@
   width: 60px;
   height: 3px;
 
-  background-color: var(--forgotten-manuscript);
+  background: #d4af37;
 
-  border-radius: 5px;
+  border-radius: 3px 3px 0 0;
 }
 
 
 /* =========================
-   RIGHT ACTIONS
+   RIGHT SIDE
 ========================= */
 
 .navbar-actions {
-  margin-left: auto;
+  justify-self: end;
 
   display: flex;
   align-items: center;
 
-  gap: 28px;
-}
-
-.nav-icon {
-  background: transparent;
-
-  border: none;
-
-  color: var(--heirloom-pearl);
-
-  font-size: 28px;
-
-  cursor: pointer;
-
-  transition: color 0.3s ease;
-}
-
-.nav-icon:hover {
-  color: var(--forgotten-manuscript);
+  gap: 20px;
 }
 
 
 /* =========================
-   SEARCH ICON
+   ICON BUTTONS
 ========================= */
 
+.nav-icon {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  border: none;
+
+  color: #e8d7a5;
+
+  cursor: pointer;
+
+  text-decoration: none;
+
+  padding: 0;
+
+  transition: 0.3s ease;
+}
+
+.nav-icon:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+
+/* Search icon */
+
 .search-symbol {
-  display: block;
+  width: 20px;
+  height: 20px;
 
-  width: 22px;
-  height: 22px;
-
-  border: 2px solid var(--heirloom-pearl);
+  border: 2px solid #f1e4c5;
 
   border-radius: 50%;
 
   position: relative;
+
+  display: block;
 }
 
 .search-symbol::after {
@@ -169,36 +195,17 @@
 
   position: absolute;
 
-  width: 10px;
+  width: 8px;
   height: 2px;
 
-  background-color: var(--heirloom-pearl);
+  background: #f1e4c5;
 
-  right: -7px;
-  bottom: -4px;
+  right: -6px;
+  bottom: -3px;
 
-  transform: rotate(45deg);
+  transform: rotate(48deg);
 
   border-radius: 2px;
-}
-
-.nav-icon:hover .search-symbol {
-  border-color: var(--forgotten-manuscript);
-}
-
-.nav-icon:hover .search-symbol::after {
-  background-color: var(--forgotten-manuscript);
-}
-
-
-/* =========================
-   BELL
-========================= */
-
-.bell-icon {
-  font-size: 27px;
-
-  transform: rotate(180deg);
 }
 
 
@@ -210,14 +217,12 @@
   display: flex;
   align-items: center;
 
-  gap: 10px;
-
-  cursor: pointer;
+  gap: 8px;
 }
 
 .profile-avatar {
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
 
   display: flex;
   align-items: center;
@@ -225,23 +230,216 @@
 
   border-radius: 50%;
 
-  background-color: var(--baroque-brass);
+  background: rgba(212, 175, 55, 0.25);
 
-  border: 2px solid var(--forgotten-manuscript);
+  border: 2px solid rgba(212, 175, 55, 0.55);
 
-  font-size: 22px;
-
-  overflow: hidden;
+  font-size: 20px;
 }
 
 .dropdown-arrow {
-  color: var(--heirloom-pearl);
+  color: #e8d7a5;
 
-  font-size: 24px;
+  font-size: 20px;
 
-  transition: color 0.3s ease;
+  margin-top: -5px;
 }
 
-.profile-section:hover .dropdown-arrow {
-  color: var(--forgotten-manuscript);
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 0 25px;
+  }
+
+  .navbar-links {
+    gap: 22px;
+  }
+
+  .navbar-actions {
+    gap: 10px;
+  }
+
+  .navbar-brand h1 {
+    font-size: 1.5rem;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .navbar {
+    grid-template-columns: auto 1fr auto;
+    padding: 0 18px;
+  }
+
+  .navbar-brand h1 {
+    font-size: 1.2rem;
+  }
+
+  .navbar-links {
+    gap: 14px;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+  }
+
+  .bell-icon {
+    display: none;
+  }
+
+  .profile-section {
+    display: none;
+  }
+
+}
+
+/* Profile Button */
+
+.profile-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+}
+
+.profile-name {
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+
+/* Profile Dropdown */
+
+.profile-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  min-width: 210px;
+  padding: 14px;
+  border: 1px solid rgba(180, 140, 70, 0.35);
+  border-radius: 14px;
+  background: rgba(255, 250, 242, 0.98);
+  box-shadow: 0 12px 35px rgba(60, 35, 15, 0.18);
+  z-index: 1000;
+}
+
+.profile-dropdown-header {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(80, 50, 20, 0.15);
+}
+
+.profile-dropdown-header strong {
+  color: #280b0f;
+  font-size: 15px;
+}
+
+.profile-dropdown-header small {
+  color: #76666a;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+
+/* Dropdown Items */
+
+.dropdown-item {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #280b0f;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background: rgba(180, 140, 70, 0.15);
+}
+
+.logout-item {
+  color: #a33a3a;
+}
+
+
+/* Login and Register Buttons */
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login-button,
+.register-button {
+  padding: 9px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.login-button {
+  color: #280b0f;
+  border: 1px solid rgba(180, 140, 70, 0.5);
+}
+
+.login-button:hover {
+  background: rgba(180, 140, 70, 0.12);
+}
+
+.register-button {
+  background: #280b0f;
+  color: #fff8ed;
+}
+
+.register-button:hover {
+  background: #4a171e;
+  transform: translateY(-1px);
+}
+
+
+/* Mobile Adjustment */
+
+@media (max-width: 768px) {
+  .profile-name {
+    display: none;
+  }
+
+  .login-button,
+  .register-button {
+    padding: 8px 11px;
+    font-size: 12px;
+  }
+
+  .profile-dropdown {
+    right: -10px;
+  }
 }

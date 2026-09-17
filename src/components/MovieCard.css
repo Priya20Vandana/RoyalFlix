@@ -1,62 +1,88 @@
-.movie-card {
-  position: relative;
-
+.movie-card-link {
+  display: block;
   min-width: 220px;
   width: 220px;
+  text-decoration: none;
+  color: inherit;
+}
 
-  border-radius: 10px;
-
+.movie-card {
+  width: 220px;
   overflow: hidden;
-
-  background-color: var(--midnight-study);
-
+  border-radius: 10px;
+  background-color: var(--midnight-study, #24191b);
   cursor: pointer;
-
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
 .movie-card:hover {
   transform: scale(1.06);
-
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.55);
-
   z-index: 10;
 }
 
 .movie-poster {
+  display: block;
   width: 100%;
   height: 310px;
-
   object-fit: cover;
-
-  display: block;
+  background-color: #302426;
 }
 
 .movie-info {
   padding: 15px;
-
-  background-color: var(--midnight-study);
+  background-color: var(--midnight-study, #24191b);
 }
 
 .movie-info h3 {
-  color: var(--heirloom-pearl);
-
+  margin: 0 0 10px;
+  color: var(--heirloom-pearl, #f5e6d3);
   font-size: 18px;
   font-weight: 500;
-
-  margin-bottom: 10px;
 }
 
 .movie-details {
   display: flex;
-
+  flex-wrap: wrap;
   gap: 10px;
-
-  color: var(--forgotten-manuscript);
-
+  color: var(--forgotten-manuscript, #d8c7b8);
   font-family: Arial, sans-serif;
-
   font-size: 13px;
+}
+
+.movie-card {
+  display: block;
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  text-decoration: none;
+  background: #1c1618;
+}
+
+.movie-poster {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.movie-card-overlay {
+  padding: 12px;
+  background: #1c1618;
+}
+
+.movie-card-overlay h3 {
+  margin: 0 0 6px;
+  color: #fff8ed;
+  font-size: 18px;
+}
+
+.movie-card-overlay p {
+  margin: 4px 0;
+  color: #d8c5a5;
+  font-size: 14px;
 }

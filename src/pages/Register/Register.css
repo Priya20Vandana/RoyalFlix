@@ -1,0 +1,264 @@
+/* ================================
+   ROYALFLIX REGISTRATION PAGE
+================================ */
+
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 20px;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(218, 181, 112, 0.22),
+      transparent 40%
+    ),
+    linear-gradient(
+      135deg,
+      #fcf9f5,
+      #f8f3fa,
+      #f4eef8
+    );
+
+  font-family: "Poppins", sans-serif;
+}
+
+/* Registration card */
+
+.register-card {
+  width: 100%;
+  max-width: 450px;
+
+  padding: 42px;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  border: 1px solid rgba(190, 157, 91, 0.35);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 20px 60px rgba(65, 35, 80, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.4);
+
+  backdrop-filter: blur(18px);
+
+  box-sizing: border-box;
+}
+
+/* Logo */
+
+.register-logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.register-crown {
+  display: block;
+
+  font-size: 48px;
+
+  color: #c49a45;
+
+  margin-bottom: 8px;
+}
+
+.register-logo h1 {
+  margin: 0;
+
+  font-family: "Cinzel", serif;
+
+  font-size: 28px;
+
+  letter-spacing: 3px;
+
+  color: #3c1f47;
+}
+
+.register-logo p {
+  margin-top: 10px;
+
+  color: #806b87;
+
+  font-size: 14px;
+}
+
+/* Form */
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #4b3153;
+}
+
+.form-group input {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #ddcfe2;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.85);
+
+  color: #3c1f47;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.form-group input:focus {
+  border-color: #c49a45;
+
+  box-shadow: 0 0 0 3px rgba(196, 154, 69, 0.14);
+}
+
+.form-group input::placeholder {
+  color: #aa9aac;
+}
+
+/* Error message */
+
+.form-error {
+  margin: 0;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  background: #fff0f0;
+
+  color: #b42318;
+
+  font-size: 13px;
+
+  text-align: center;
+}
+
+/* Success message */
+
+.form-success {
+  margin: 0;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  background: #eefaf1;
+
+  color: #217a3c;
+
+  font-size: 13px;
+
+  text-align: center;
+}
+
+/* Button */
+
+.register-button {
+  width: 100%;
+
+  padding: 15px;
+
+  margin-top: 8px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #c49a45,
+    #e0bd72
+  );
+
+  color: #2f1b35;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.register-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(196, 154, 69, 0.3);
+}
+
+.register-button:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+/* Login link */
+
+.login-link {
+  margin-top: 25px;
+
+  text-align: center;
+
+  color: #806b87;
+
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #a37a29;
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+
+@media (max-width: 480px) {
+  .register-card {
+    padding: 28px 22px;
+  }
+
+  .register-logo h1 {
+    font-size: 24px;
+  }
+}

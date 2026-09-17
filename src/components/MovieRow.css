@@ -1,34 +1,33 @@
 .movie-row {
-  padding: 50px 6%;
-
-  background-color: var(--midnight-study);
+  padding: 35px 60px;
+  background-color: #171314;
 }
 
-.movie-row h2 {
-  color: var(--heirloom-pearl);
-
-  font-size: 28px;
-  font-weight: 500;
-
-  margin-bottom: 25px;
+.movie-row-title {
+  margin-bottom: 20px;
+  color: #f5e6d3;
+  font-size: 30px;
+  font-family: Georgia, serif;
 }
 
-.movie-list {
+.movie-row-container {
   display: flex;
-
   gap: 20px;
-
   overflow-x: auto;
-
-  padding: 10px 5px 25px;
+  padding-bottom: 15px;
+  scroll-behavior: smooth;
 }
 
-.movie-list::-webkit-scrollbar {
-  height: 6px;
+.movie-row-container::-webkit-scrollbar {
+  height: 8px;
 }
 
-.movie-list::-webkit-scrollbar-thumb {
-  background-color: var(--baroque-brass);
-
+.movie-row-container::-webkit-scrollbar-thumb {
+  background-color: #c9a44c;
   border-radius: 10px;
+}
+
+.no-movies {
+  color: #d8c7b8;
+  font-size: 16px;
 }

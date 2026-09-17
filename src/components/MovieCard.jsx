@@ -1,28 +1,37 @@
 import { Link } from "react-router-dom";
 import "./MovieCard.css";
 
-function MovieCard({ id, title, image, year, genre }) {
-return (
-<Link to={`/movie/${id}`} className="movie-card-link"> <div className="movie-card"> <img
-       src={image}
-       alt={title}
-       className="movie-poster"
-     />
+function MovieCard({ movie }) {
+  if (!movie) {
+    return null;
+  }
 
+  return (
+    <Link to={`/movie/${movie.id}`} className="movie-card">
+      <img
+        src={movie.poster_url}
+        alt={movie.title}
+        className="movie-poster"
+        onError={(event) => {
+          event.currentTarget.style.display = "none";
+        }}
+      />
 
-    <div className="movie-info">
-      <h3>{title}</h3>
+      <div className="movie-card-overlay">
+        <h3>{movie.title}</h3>
 
-      <div className="movie-details">
-        <span>{year}</span>
-        <span>{genre}</span>
+        {movie.year && <p>{movie.year}</p>}
+
+        {movie.genre && (
+          <p className="movie-genre">
+            {Array.isArray(movie.genre)
+              ? movie.genre.join(", ")
+              : movie.genre}
+          </p>
+        )}
       </div>
-    </div>
-  </div>
-</Link>
-
-
-);
+    </Link>
+  );
 }
 
 export default MovieCard;
